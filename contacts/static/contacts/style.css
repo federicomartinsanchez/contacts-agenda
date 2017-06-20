@@ -1,0 +1,72 @@
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+  font-size: large !important;
+  margin-left: 0 !important;
+}
+
+.navbar-right {
+  margin-right: 0 !important;
+}
+
+.contacto-img {
+  height: 100px;
+}
+
+.media {
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+#submitbtn {
+  margin-top: 20px;
+}
+
+#filterinput,
+#select,
+#searchbtn {
+  height: 35px;
+  padding-left: 2px;
+}
+
+#filterinputdiv {
+  margin-top: 5px;
+}
+
+#nombreTitulo {
+  color: #ec7156;
+  padding-bottom: 20px;
+}
+
+#direccionTitulo {
+  color: gray;
+  padding-bottom: 5px;
+}
+
+.btnsmall {
+  padding: 3px !important;
+  margin-bottom: 5px !important;
+}
+
+.media-right {
+  float: right;
+  padding-top: 35px;
+}
+
+.media-left {
+  float: left;
+}
+
+.media img {
+  border-radius: 50%;
+}
+
+.media-heading {
+  color: #ec7156;
+  margin-bottom: 10px;
+}
+
+.media-body {
+  padding-top: 15px;
+}

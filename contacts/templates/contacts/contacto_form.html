@@ -1,0 +1,20 @@
+{% extends 'contacts/base.html'%}
+{% block  body %}
+<div class="container fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-7">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form action="" method ="post">
+            {% csrf_token %}
+            {% include 'contacts/form-template.html' %}
+            <div class="col-xs-6" id ="submitbtn">
+            <input type="submit" class="btn btn-info" name="" value="Guardar">
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ {% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'contacts/base.html'%} {% block body %}
+<div class="container">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="media">
+        <h2 id ="nombreTitulo">{{contacto.nombre }} {{contacto.apellidos}}</h2>
+        <h5>Telefono: {{contacto.telefono }}</h5>
+        <h5>Email: <a href="mailto:{{contacto.email}}">{{contacto.email }}</a></h5>
+        <h5>Pagina Web: <a href="http://{{contacto.pagina_web}}">{{contacto.pagina_web}}</a></h5>
+        <h3 id="direccionTitulo">Direccion: </h3>
+        <h5>Calle: {{contacto.calle }}</h5>
+        <h5>Provincia: {{contacto.provincia }}</h5>
+        <h5>Codigo Postal: {{contacto.codigo_postal }}</h5>
+        <h5>Pais: {{contacto.pais }}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

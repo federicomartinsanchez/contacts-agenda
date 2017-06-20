@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts Manager</title>
+    {% load staticfiles %}
+    <!-- Custom CSS   -->
+    <link rel="stylesheet" href={% static 'contacts/style.css' %}>
+    <!--  Bootstrap theme  -->
+    <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css">
+    <!--  Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--  Bootstrap JS   -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--  Google font for the logo  -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!--  favicon  -->
+    <link rel="icon" href="{%static 'contacts/img/logoagenda.png'%}" type="image/x-icon" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{% url 'contacts:index' %}"><span class="glyphicon glyphicon-glass"></span>  Agenda de Contactos</a>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="{% url 'contacts:nuevo-contacto' %}">
+              <span class="glyphicon glyphicon-plus"></span>&nbsp; Añadir Contacto
+            </a>
+          </li>
+        </ul>
+        <form class="nav navbar-nav navbar-left form-inline" role="search" method="get" action="#">
+          <div class="input-group" id=filterinputdiv>
+            <input type="text" name="q" class="form-control" placeholder="Filtrar..." id="filterinput">
+              <span class="input-group-btn">
+                <select class="selectpicker form-control" id="select" name="select">
+                  <option>Nombre</option>
+                  <option>Correo</option>
+                  <option>Codigo Postal</option>
+                  <option>Pais</option>
+                </select>
+                <button class="btn btn-secondary" type="submit" id = "searchbtn">Buscar</button>
+              </span>
+          </div>
+        </form>
+      </div>
+    </nav>
+    {% block body %} {% endblock %}
+  </body>
+
+</html>

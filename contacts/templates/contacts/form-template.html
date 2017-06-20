@@ -1,0 +1,19 @@
+{% load staticfiles%}
+<!--  Google Places API  -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOn2yc0vQ0vj3VNXlfRoNjrmoYRgGKo4&libraries=places"></script>
+<!--  Custom script for address Autocomplete  -->
+<script src="{% static 'contacts/js/places-autocomplete.js'%}"></script>
+
+{% for field in form %}
+<div class="form-group">
+  <div class="col-sm-offset-2 col-lg-12">
+    <span class="text-danger small">{{field.errors}}</span>
+  </div>
+    <label class="control-label col-sm-2">{{field.label_tag}}</label>
+  <div class="col-lg-10">{{field}}</div>
+    <br> {%endfor%}
+  <div class="col-lg-12">
+    <h5>* Rellena automaticamente los campos de direccion buscando en Google Places:</h5>
+    <input placeholder="Selecciona una direccion..." class="form-control" id='searchTextField' type="text" name="" value="">
+  </div>
+</div>
